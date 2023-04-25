@@ -116,6 +116,8 @@ const chatSlice = createSlice({
         builder.addCase(createConversation.fulfilled, (state, { payload }) => {
             if (!payload) return;
             const { data } = payload;
+            const isExist = state.listConversation.find((item) => item.conversationId === data.conversationId);
+            if (isExist) return;
             state.conversation = data;
             state.listConversation = [data, ...state.listConversation];
         });
