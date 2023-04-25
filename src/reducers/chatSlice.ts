@@ -64,7 +64,7 @@ const chatSlice = createSlice({
         },
         addToListConversation: (state, action) => {
             if (!action.payload) return;
-            const isExist = state.listConversation.filter(
+            const isExist = state.listConversation.find(
                 (item) => item.conversationId === action.payload.conversationId,
             );
             if (isExist) return;
