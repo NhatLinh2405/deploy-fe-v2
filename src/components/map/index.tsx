@@ -157,6 +157,9 @@ export default function Map({ me, friends, isFocus, handleFocus, setFriends, inf
                         // doubleClickZoom={false}
                         attributionControl={false}
                         zoomControl={false}
+                        style={{
+                            height: window.innerHeight >= 750 ? '100vh' : '',
+                        }}
                         className={styles.container__mapContainer}
                     >
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

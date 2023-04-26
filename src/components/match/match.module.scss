@@ -17,10 +17,9 @@
         flex-direction: column;
         justify-content: space-between;
         color: $cl-white;
-        height: 88vh;
+        height: 88.2vh;
         @include android {
-            min-height: 92.5vh;
-            max-height: 92vh;
+            height: 92.5vh;
         }
 
         background-color: $cl-main-purple;

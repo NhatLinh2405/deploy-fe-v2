@@ -2,15 +2,14 @@ import { useAppDispatch, useAppSelector } from '@/app/store';
 import { addToListConversation, selectListConversation, setNewMessage, setSelectMessage } from '@/reducers/chatSlice';
 import { updateLocation } from '@/reducers/mapSlice';
 import { selectSocket, setSocketChat, setSocketNotify } from '@/reducers/socketSlice';
-import { toastError } from '@/utils/toast';
+import { useRouter } from 'next/router';
 import React, { useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
+import APP_PATH from '../constant/appPath';
 import { selectAuth, setLogin } from '../reducers/authSlice';
 import { getConversation } from '../reducers/conversationAction';
 import { updateListMatch } from '../reducers/matchSlice';
 import { getProfile } from '../reducers/userAction';
-import { useRouter } from 'next/router';
-import APP_PATH from '../constant/appPath';
 
 function FakePage() {
     const isSendRequest = useRef<boolean>(false);

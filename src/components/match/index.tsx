@@ -64,7 +64,12 @@ export default function Matching() {
     return (
         <section id="navbar" className={`${styles.container} animate-up`}>
             {sMatch ? (
-                <div className={`${styles.container__box} matchingFrame`}>
+                <div
+                    style={{
+                        height: window.innerHeight > 750 ? '100vh' : '',
+                    }}
+                    className={`${styles.container__box} matchingFrame`}
+                >
                     <div className={styles.container__box__btn}>
                         <button className={styles.container__box__btn__button} onClick={handleClose}>
                             <CloseIcon />
